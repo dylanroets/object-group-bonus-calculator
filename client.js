@@ -32,6 +32,7 @@ const employees = [
   }
 ];
 
+
 console.log('array of employee data: ',  employees );
 
 
@@ -48,10 +49,27 @@ console.log('array of employee data: ',  employees );
 
 // This function will calculate 1 employee's bonus!
 //
-function calculateIndividualEmployeeBonus( employee ) {  
+function calculateIndividualEmployeeBonus( employee ) {
+  let matches = []
+  for (let person of employees) {
+    if (person.reviewRating < 3) {
+      matches.push(employees.name)
+      return 'No Bonus: ' + person.name;
+    }
+  }
+  return matches
+}
+console.log(calculateIndividualEmployeeBonus(employees));
+  //   let matches = [];
+//   for (person of employees) {
+//     if (employees.reviewRating < 3) {
+//       matches.push(person);
+//     }
+//     return matches
+//   }
+// calculateIndividualEmployeeBonus(employees);
   // your logic here
   
   
   // return new object with bonus results
 
-}
