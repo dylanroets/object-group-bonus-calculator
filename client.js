@@ -49,18 +49,33 @@ console.log('array of employee data: ',  employees );
 
 // This function will calculate 1 employee's bonus!
 //
+
+
+
 function calculateIndividualEmployeeBonus( employee ) {
-  let matches = []
+  // let matches = []
+  let obj = {}
   for (let person of employees) {
     if (person.reviewRating < 3) {
-      matches.push(employees.name)
-      return 'No Bonus: ' + person.name;
+      return person.name;
     }
   }
-  return matches
 }
 console.log(calculateIndividualEmployeeBonus(employees));
-  //   let matches = [];
+//     //Checking to see if the rating is less then 3 
+//       else if (person.reviewRating === 3) {
+//         return (person.name + ' ' + person.annualSalary * .04);
+//       }
+//         else if (person.reviewRating === 4) {
+//           return (person.name + 'Bonus ' + person.annualSalary * .06);
+//       }
+//     }
+//   return 'No Bonus: ' + matches;
+// }
+//  console.log(calculateIndividualEmployeeBonus(employees));
+
+
+//     let matches = [];
 //   for (person of employees) {
 //     if (employees.reviewRating < 3) {
 //       matches.push(person);
